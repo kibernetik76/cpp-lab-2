@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <math.h>
 long double factorial2(long double x) {
@@ -22,10 +23,11 @@ long double T(long double x) {
 
 int main() {
     int y;
-    scanf_s("%d", &y);
+    scanf("%d", &y);
     long double z = (7 * T(0.25) + 2 * T(1 + y));
     long double u = (6 - T(y*y - 1));
-    long double l = z / u;
+    double l = z / u;
+    
     printf("%lf", l);
     return 0;
 }
