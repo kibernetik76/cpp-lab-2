@@ -12,22 +12,22 @@ long double factorial2(long double x) {
     return a;
 }
 long double T(long double x) {
-    long double a1 = 0;
-    long double a2 = 0;
+    long double up = 0;
+    long double under = 0;
     for (long double k = 0; k <= 10; k++) {
-        a1 += ((pow(x, 2 * k + 1)) / (factorial2(2 * k + 1)));
-        a2 += ((pow(x, 2 * k)) / (factorial2(2 * k)));
+        up += ((pow(x, 2 * k + 1)) / (factorial2(2 * k + 1)));
+        under += ((pow(x, 2 * k)) / (factorial2(2 * k)));
     }
-    return (a1 / a2);
+    return (up / under);
 }
 
 int main() {
     int y;
     scanf("%d", &y);
-    long double z = (7 * T(0.25) + 2 * T(1 + y));
-    long double u = (6 - T(y*y - 1));
-    double l = z / u;
+    long double up2 = (7 * T(0.25) + 2 * T(1 + y));
+    long double under2 = (6 - T(y*y - 1));
+    double finish = up2 / under2;
     
-    printf("%lf", l);
+    printf("%lf", finish);
     return 0;
 }
